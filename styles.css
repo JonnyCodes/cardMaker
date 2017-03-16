@@ -3,24 +3,9 @@
   padding: 0;
 }
 
-body {
-    overflow-y:hidden;
-}
-
 .container {
-	margin: 0;
 	width: 100%;
-	height: 100%;
-	display: flex;
-}
-
-#options {
-	padding-top: 20px;
-	margin-right: 10px;
-	min-width: 250px;
-	max-width: 350px;
-	height: 100%;
-	flex: 0 1 100%;
+	padding-left: 310px;
 }
 
 #options .inset {
@@ -35,7 +20,6 @@ body {
 	overflow-y: scroll;
 	height: 100%;
 	width: 100%;
-	flex: 1 1 100%;
 }
 
 @media print {

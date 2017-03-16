@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$('select').material_select();
-
+	
 	$('.switch').on('click', function() { $('.collapsible').trigger('click'); });
 
 	if (window.File && window.FileReader && window.FileList && window.Blob) {

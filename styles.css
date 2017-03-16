@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    overflow-y:hidden;
+}
+
+.container {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+#options {
+	padding-top: 20px;
+	margin-right: 10px;
+	min-width: 250px;
+	max-width: 350px;
+	height: 100%;
+	flex: 0 1 100%;
+}
+
+#options .inset {
+	margin: 20px;
+}
+
+.switch > label {
+	float: right;
+}
+
+#imageArea {
+	overflow-y: scroll;
+	height: 100%;
+	width: 100%;
+	flex: 1 1 100%;
+}
+
+@media print {
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	.no-print, .no-print * {
+		display: none;
+	}
+
+	#imageArea {
+        overflow: visible;
+    }
+}
+
+@page {
+	margin: 0.25in;
+}

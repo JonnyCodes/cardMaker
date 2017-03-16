@@ -1,0 +1,100 @@
+<html>
+	<head>
+		<title>Card Maker</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+		<link href="./styles.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div class="container">
+			<div id="options" class="no-print z-depth-2">
+				<form action="#">
+					<div class="file-field input-field inset">
+				    	<div class="btn">
+				    		<span>Files</span>
+				    		<input id="fileinput" type="file" multiple>
+				   		</div>
+				    	<div class="file-path-wrapper">
+				    		<input class="file-path validate" type="text" placeholder="Upload one or more files">
+				    	</div>
+					</div>
+				</form>
+
+
+				<ul class="collapsible z-depth-0" data-collapsible="accordion">
+					<li>
+						<div class="collapsible-header switch">Resize cards?
+							<label>
+								No
+								<input type="checkbox" id="shouldResize">
+								<span class="lever"></span>
+								Yes
+							</label>
+						</div>
+						<div class="collapsible-body">
+							<!-- if shouldResize -->
+							<!-- Card Size -->
+							<div class="input-field col s12">
+								<select id="cardSizes">
+									<option value="poker">Poker/Magic cards (2.5" x 3.5")</option>
+									<option value="bridge">Bridge cards (2.25" x 3.5")</option>
+									<option value="large">Large cards (3.5" x 5")</option>
+									<option value="tarot">Tarot size (2.75" x 4.75")</option>
+									<option value="mini">Mini size (1.75" x 2.5")</option>
+								</select>
+								<label>Card Sizes</label>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="collapsible-header switch">Add Border?
+							<label>
+								No
+								<input type="checkbox" id="applyBorder">
+								<span class="lever"></span>
+								Yes
+							</label>
+						</div>
+						<div class="collapsible-body">
+							<label>
+								<span>Border color</span>
+								<input type="text" id="borderColor"/>
+							</label>
+
+							<!-- border thickness -->
+							<p class="range-field">
+								Border thickness
+						    	<input type="range" id="borderThickness" min="0" max="20" value="0"/>
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="collapsible-header">Spacing</div>
+						<div class="collapsible-body">
+							<!-- Row Space -->
+							<p class="range-field">
+								Row Space
+						    	<input type="range" id="rowSpace" min="0" max="50" value="0"/>
+							</p>
+
+							<!-- Column Space -->
+							<p class="range-field">
+								Column Space
+						    	<input type="range" id="columnSpace" min="0" max="50" value="0"/>
+							</p>
+
+						</div>
+					</li>
+				</ul>	
+				
+				<a id="applyBtn" class="inset waves-effect waves-light btn">Apply</a>
+			</div>
+
+			<div id="imageArea">
+			</div>
+		</div>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+		<script src="./main.js"></script>
+	</body>
+</hml>

@@ -53,8 +53,8 @@ function applyStyles(event) {
 	if(resizeCards) {
 		switch(cardSize) {
 			case "poker":
-				newWidth = 2.55;
-				newHeight = 3.54;
+				newWidth = 2.5;
+				newHeight = 3.5;
 			break;
 
 			case "bridge":

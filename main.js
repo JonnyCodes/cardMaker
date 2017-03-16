@@ -1,14 +1,14 @@
 $(document).ready(function() {
-	$('select').material_select();
-	
-	$('.switch').on('click', function() { $('.collapsible').trigger('click'); });
+	$("select").material_select();
+
+	$(".switch").on("click", function() { $(".collapsible").trigger("click"); });
 
 	if (window.File && window.FileReader && window.FileList && window.Blob) {
 		// Great success! All the File APIs are supported.
 		$("#fileinput").change(handleFilesSelected);
 		$("#applyBtn").click(applyStyles);
 	} else {
-	  alert('The File APIs are not fully supported in this browser.');
+	  alert("The File APIs are not fully supported in this browser.");
 	}
 });
 

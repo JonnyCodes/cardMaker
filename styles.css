@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-.container {
+.wrapper {
 	width: 100%;
 	padding-left: 310px;
 }
@@ -23,7 +23,8 @@
 }
 
 @media print {
-	* {
+	
+	.wrapper {
 		margin: 0;
 		padding: 0;
 	}

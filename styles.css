@@ -22,6 +22,16 @@
 	width: 100%;
 }
 
+/*Fixing some problems with materialize CSS, when putting range sliders in the side-nav*/
+
+.side-nav input[type=range]+.thumb.active {
+	top: 10px !important;
+}
+
+.side-nav input[type=range]+.thumb.active .value {
+	line-height: 16px;
+}
+
 @media print {
 	
 	.wrapper {

@@ -44,8 +44,9 @@ function applyStyles(event) {
 	let borderColor = applyBorder ? $("#borderColor").val() : "#000000";
 	let borderThickness = applyBorder ? $("#borderThickness").val() : 0;
 
-	let rowSpace = $("#rowSpace").val();
-	let columnSpace = $("#columnSpace").val();
+	let addSpacing = $("#addSpacing").is(':checked');
+	let rowSpace = addSpacing ? $("#rowSpace").val() : 0;
+	let columnSpace = addSpacing ?  $("#columnSpace").val() : 0;
 
 	let newWidth;
 	let newHeight;

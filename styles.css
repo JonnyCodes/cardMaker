@@ -22,6 +22,12 @@
 	width: 100%;
 }
 
+.instructions {
+	padding: 16px;
+	font-size: .8rem;
+	color: #9e9e9e;
+}
+
 /*Fixing some problems with materialize CSS, when putting range sliders in the side-nav*/
 
 .side-nav input[type=range]+.thumb.active {

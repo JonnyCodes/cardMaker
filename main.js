@@ -1,12 +1,14 @@
 $(document).ready(function() {
 	$("select").material_select();
 
-	$(".switch").on("click", function() { $(".collapsible").trigger("click"); });
-
 	if (window.File && window.FileReader && window.FileList && window.Blob) {
 		// Great success! All the File APIs are supported.
 		$("#fileinput").change(handleFilesSelected);
 		$("#applyBtn").click(applyStyles);
+
+
+		$("#cardSizes").change(handleCustomCardSize);
+		$("#customSize").hide();
 	} else {
 	  alert("The File APIs are not fully supported in this browser.");
 	}
@@ -34,6 +36,14 @@ function loadFile(file) {
 
 function onLoaded(event) {
 	$("#imageArea").append($("<img>").attr({src: event.target.result}));
+}
+
+function handleCustomCardSize(event) {
+	if($("#cardSizes").val() === "custom") {
+		$("#customSize").show(250);
+	} else {
+		$("#customSize").hide(250);
+	}
 }
 
 function applyStyles(event) {
@@ -76,6 +86,11 @@ function applyStyles(event) {
 			case "mini":
 				newWidth = 1.75;
 				newHeight = 2.5;
+			break;
+
+			case "custom":
+				newWidth = $(".customWidth").val();
+				newHeight = $(".customHeight").val();
 			break;
 		}
 	}

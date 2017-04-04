@@ -32,15 +32,20 @@
 						<div class="collapsible-body">
 							<!-- if shouldResize -->
 							<!-- Card Size -->
-							<div class="input-field col s12">
+							<div class="input-field">
 								<select id="cardSizes">
 									<option value="poker">Poker/Magic cards (2.5" x 3.5")</option>
 									<option value="bridge">Bridge cards (2.25" x 3.5")</option>
 									<option value="large">Large cards (3.5" x 5")</option>
 									<option value="tarot">Tarot size (2.75" x 4.75")</option>
 									<option value="mini">Mini size (1.75" x 2.5")</option>
+									<option value="custom">Custom size</option>
 								</select>
 								<label>Card Sizes</label>
+								<div id="customSize">
+									<input type="number" class="customWidth" placeholder="Width" />
+									<input type="number" class="customHeight" placeholder="Height" />
+								</div>
 							</div>
 						</div>
 					</li>
@@ -54,10 +59,7 @@
 							</label>
 						</div>
 						<div class="collapsible-body">
-							<label>
-								<span>Border color</span>
-								<input type="text" id="borderColor"/>
-							</label>
+							<input type="text" id="borderColor" placeholder="Border Color" />
 
 							<!-- border thickness -->
 							<p class="range-field">
